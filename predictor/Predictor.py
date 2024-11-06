@@ -243,17 +243,6 @@ class Predictor:
             with open("predictor.config", "w") as outfile: 
                 json.dump(self.dict_distances, outfile)                
 
-    #Aumento de datos
-    def dataAugmentation(self,imagesDir="Config/Test/"):
-        images = list(Path(imagesDir).glob("*.*"))
-
-        if not exists(f"{imagesDir}AugmentedImages/"):
-            mkdir(f"{imagesDir}AugmentedImages/")
-        
-        for i,image in enumerate(images):                    
-            transformed_images = augmentImage(image)    
-            for j,image in enumerate(transformed_images):
-                image.save(f"{imagesDir}AugmentedImages/img_{i+1}_{j+1}.png")
 
 
 #Seleccion de camara con la que se trabajara
