@@ -266,8 +266,3 @@ oPredictor.predict()
 #oPredictor = Predictor(cam,2)
 #oPredictor.predict()
 #oPredictor.predict_test()
-
-
-
-
-
